@@ -19,8 +19,30 @@
       display: block;
     }
   </style>
+
+  <!-- Poki SDK Offline Stub -->
+  <script>
+    window.PokiSDK = {
+      init: function() {
+        return Promise.resolve();
+      },
+      gameLoadingStart: function() {},
+      gameLoadingFinished: function() {},
+      gameplayStart: function() {},
+      gameplayStop: function() {},
+      happyTime: function() {},
+      setDebug: function() {},
+      commercialBreak: function() {
+        return Promise.resolve();
+      },
+      rewardedBreak: function() {
+        return Promise.resolve(true);
+      }
+    };
+  </script>
 </head>
 <body>
-  <script src="c3runtime.js"></script>
+  <!-- Construct 3 Main Script -->
+  <script src="main.js"></script>
 </body>
 </html>
